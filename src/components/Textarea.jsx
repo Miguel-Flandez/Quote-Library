@@ -102,12 +102,13 @@ export default function Textarea(){
             <>
             
             {showDeleteModal && <ConfirmDelete onConfirm={handleConfirm}/>}{/*  hide the modal */}
-                <div className="flex flex-col gap-2 bg-white border-gray-400 rounded-[20px] w-[75%] min-h-[85%] max-h-[85%] p-10">
+                <div className="flex flex-col gap-2 bg-white border-gray-400 rounded-[20px] w-[75%] min-h-[85%] max-h-[85%] p-10
+                max-sm:w-[90%] max-sm:p-5">
                     {showInputField && <textarea name="input" id="textbox" 
                     className="w-full min-h-[90%] text-gray-400 p-2 resize-none border-2 border-gray-400"
                     ref={inputs}>
                     </textarea>}
-                    {!showInputField && <div className="w-full min-h-[90%] text-gray-400 text-3xl font-bold font-mono text-center p-2 resize-non overflow-y-auto">
+                    {!showInputField && <div className="w-full min-h-[90%] text-gray-400 text-3xl max-sm:text-lg font-bold font-mono text-center p-2 resize-non overflow-y-auto">
                         {quote}
                     </div>}
                     <div className="flex justify-center gap-2 bg-gray border-t-2 border-gray-400 pt-2">
